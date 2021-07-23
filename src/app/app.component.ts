@@ -22,7 +22,10 @@ export class AppComponent implements OnInit {
   }
 
   public onCatClick(): void{
+    // название переменной всегда должно отображать то что оно делает, например не variable3
+    // a selectedAnimal и сразу становится намного понятнее
     this.variable3 = 'Выбранное животное:{{Кот}}';
+    // фигурные скобки были как бы намек на то чтобы в html это вставить)))
   }
   public onDogClick(): void{
     this.variable3 = 'Выбранное животное:{{Собака}}';

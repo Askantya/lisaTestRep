@@ -1,27 +1,22 @@
-# LisaAngular
+23.07.2021
+  animal-table: 
+    1) изначально картинка не видна, когда наводишь на нее мышку, то она медленно появляется 
+       (пусть будет 1 секунда) (подсказки(opacity, transition))
+    2) добавь еще одну колонку с кнопкой на каждый ряд. Когда нажимаешь на кнопку, под таблицей пишешь:
+       "Выбранное животное: {{ имя_животного }}"
+    3) Используй один метод для кнопки выбора животного. пусть будет selectAnimal.
+       в темплейте можно слать параметры в функцию так же как и везде ( selectAnimal(ПАРАМЕТР) )
+       а отлавливать их можно в компоненте добавив в функию арумент
+       пример:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+        public countSumAB(a: number, b: number) {
+          a+b
+        }
+        
+        вызов:
+        
+        countSumAB(1, 2); - шлем параметры для А=1, B=2
 
-## Development server
+        так можно слать в функцию любые типы данных (в countSumAB были number, но может быть string например)
+        и любое количество аргументов (столько сколько объявила)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
