@@ -27,6 +27,7 @@
     <tr>
       <th>Название</th>
       <th>Картинка</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -36,15 +37,22 @@
         <label>Кот</label>
       </td>
       <td><img class="image" src="../assets/images/kotik.jpg" /></td>
+      <td><button (click)="onCatClick()">Cat</button></td>
     </tr>
     <tr>
       <td>Собака</td>
       <td><img class="image" src="../assets/images/sobaka.jpg" /></td>
+      <td><button (click)="onDogClick()">Dog</button></td>
     </tr>
     <tr>
       <td>Капибара</td>
       <td><img class="image" src="../assets/images/kapibara.jpe" /></td>
+      <td><button (click)="onKapibaraClick()">Kapibara</button></td>
     </tr>
   </tbody>
 
 </table>
+
+<div class="textable">
+  <p>{{ variable3 }}</p>
+</div>
