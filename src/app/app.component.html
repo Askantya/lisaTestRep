@@ -8,7 +8,7 @@
 </div>
 
 <div>
-  <input>
+  <input />
 </div>
 
 <div>
@@ -16,15 +16,35 @@
 </div>
 
 <div>
-  <button (click)="onCloseClick()">
-    Close
-  </button>
+  <button (click)="onCloseClick()">Close</button>
 </div>
 
-<img src="../assets/images/image1.jpeg">
+<img src="../assets/images/image1.jpeg" />
 
+<table class="table">
 
+  <thead>
+    <tr>
+      <th>Название</th>
+      <th>Картинка</th>
+    </tr>
+  </thead>
 
-<table>
+  <tbody>
+    <tr>
+      <td>
+        <label>Кот</label>
+      </td>
+      <td><img class="image" src="../assets/images/kotik.jpg" /></td>
+    </tr>
+    <tr>
+      <td>Собака</td>
+      <td><img class="image" src="../assets/images/sobaka.jpg" /></td>
+    </tr>
+    <tr>
+      <td>Капибара</td>
+      <td><img class="image" src="../assets/images/kapibara.jpe" /></td>
+    </tr>
+  </tbody>
 
 </table>
