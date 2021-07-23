@@ -37,23 +37,22 @@
         <label>Кот</label>
       </td>
       <td><img class="image" src="../assets/images/kotik.jpg" /></td>
-      <td><button (click)="onCatClick()">Cat</button></td>
+      <td><button (click)="onAnimalClick('Кот')">Cat</button></td>
     </tr>
     <tr>
       <td>Собака</td>
       <td><img class="image" src="../assets/images/sobaka.jpg" /></td>
-      <td><button (click)="onDogClick()">Dog</button></td>
+      <td><button (click)="onAnimalClick('Собака')">Dog</button></td>
     </tr>
     <tr>
       <td>Капибара</td>
       <td><img class="image" src="../assets/images/kapibara.jpe" /></td>
-      <td><button (click)="onKapibaraClick()">Kapibara</button></td>
+      <td><button (click)="onAnimalClick('Капибара')">Kapibara</button></td>
     </tr>
   </tbody>
 
 </table>
 
 <div class="textable">
-  <p>{{ variable3 }}</p>
-  <!-- Проще было бы "Выбранное животное: {{ variable 3 }}" -->
+  <p>Выбранное животное:{{ selectedAnimal }}</p>
 </div>
