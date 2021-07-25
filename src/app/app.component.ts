@@ -8,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
-    const num = 3;
-    const a = 4;
-    const b = 5;
-    const ch = (Math.pow(num, 2) + Math.pow(a, 3) - Math.sqrt(b));
-    console.log(+ ch.toFixed(2));
+    const a = this.countMathExpression(2, 3, 5);
+    console.log(a)
   }
 
   public onCloseClick(): void {
 
   }
 
+  private countMathExpression(a: number, b: number, c: number): number {
+    const result = Math.pow(a, 2) + Math.pow(b, 3) - Math.sqrt(c);
+    return +result.toFixed(2);
+  }
 
 }
