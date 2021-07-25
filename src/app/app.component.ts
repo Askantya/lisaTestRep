@@ -7,18 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  public variable1 = '';
-  private variable2 = 123;
-
   public ngOnInit(): void {
-    const a = 123;
-    const b = 3;
-    console.log(a + b);
+    const num = 3;
+    const a = 4;
+    const b = 5;
+    const ch = (Math.pow(num, 2) + Math.pow(a, 3) - Math.sqrt(b));
+    console.log(+ ch.toFixed(2));
   }
 
-  public onCloseClick() {
-    this.variable1 += '1';
-    const a='123';
-    
+  public onCloseClick(): void {
+
   }
+
+
 }
