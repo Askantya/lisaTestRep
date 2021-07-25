@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   }
 
   private stringSum(strFirst: string, strSecond: string): string{
-    const stringResult = strFirst + ' ' + strSecond;
+    const stringResult = strFirst + ' ' + this.stringTransform(strSecond);
     return stringResult;
   }
 }
