@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     this.starStrings(3);
     this.eachSymbolOfString('ABCD')
+    this.fiftyEvenNumber();
   }
 
   private starStrings(starNum: number): void {
@@ -26,6 +27,12 @@ export class AppComponent implements OnInit {
   private eachSymbolOfString(stringExample: string): void {
     for(let i=0; i<stringExample.length; i++){
       console.log(stringExample[i]);
+    }
+  }
+
+  private fiftyEvenNumber(): void{
+    for(let i=1; i<=50; i++){
+      if(i%2==0) console.log(i);
     }
   }
 }
