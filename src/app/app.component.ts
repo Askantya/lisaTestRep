@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
-    const stringResult = this.stringSum('black', 'yellow')
-    console.log(stringResult);    
+    const stringWithoutSpaces = this.delStringSpaces('This string without spaces');
+    console.log(stringWithoutSpaces)
+       
   }
 
 
@@ -32,8 +33,13 @@ export class AppComponent implements OnInit {
     return stringLarge;
   }
 
-  private stringSum(strFirst: string, strSecond: string): string{
+  private stringSum(strFirst: string, strSecond: string): string {
     const stringResult = strFirst + ' ' + this.stringTransform(strSecond);
     return stringResult;
+  }
+
+  private delStringSpaces(stringWithSpaces: string): string {
+    const stringWithoutSpaces = stringWithSpaces.split(' ').join('');
+    return stringWithoutSpaces;
   }
 }
