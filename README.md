@@ -21,6 +21,11 @@
   4) окно из вк
 
 25.07.2021
+https://learn.javascript.ru/types
+https://learn.javascript.ru/number
+https://learn.javascript.ru/string
+https://learn.javascript.ru/function-basics
+https://learn.javascript.ru/function-expressions
   типы данных:
     bolean: 
       является самым простым типом . имеет 2 значения true/false (эквивалентно 1/0).
