@@ -8,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
-    const a = this.countMathExpression(2, 3, 5);
-    console.log(a);
-    
-    const stringLength = this.countStringLength('Result');
-    console.log(stringLength);
+    const stringLarge = this.stringTransform('yellow');
+    console.log(stringLarge);
   }
 
   public onCloseClick(): void {
@@ -29,4 +26,8 @@ export class AppComponent implements OnInit {
     return stringLength;
   }
 
+  private stringTransform(stringSmall: string): string {
+    const stringLarge = stringSmall.toUpperCase();
+    return stringLarge;
+  }
 }
