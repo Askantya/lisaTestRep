@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
     this.eachSymbolOfString('ABCD')
     this.fiftyEvenNumber();
     this.deleteSymbol('askantya', 'a');
+    this.simpleNumber(90);
   }
 
   private starStrings(starNum: number): void {
@@ -47,5 +48,16 @@ export class AppComponent implements OnInit {
       }
     }
     console.log(delSymbolString);
+  }
+
+  private simpleNumber(numberOfSimple: number): void {
+    for(let i=2; i<=numberOfSimple; i++){
+      let trueFalse = true;
+      for(let p=2; p<=(i/p); p++) {
+        if((i%p)==0) trueFalse=false;
+      }
+      if(trueFalse==true) console.log(i);
+      
+    }
   }
 }
