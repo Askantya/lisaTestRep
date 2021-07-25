@@ -16,7 +16,9 @@ export class AppComponent implements OnInit {
     console.log(a + b);
   }
 
-  public onCloseClick(): void {
+  public onCloseClick() {
     this.variable1 += '1';
+    const a='123';
+    
   }
 }
