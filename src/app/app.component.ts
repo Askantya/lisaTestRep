@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
-    const stringLarge = this.stringTransform('yellow');
-    console.log(stringLarge);
+    const stringResult = this.stringSum('black', 'yellow')
+    console.log(stringResult);    
   }
+
 
   public onCloseClick(): void {
 
@@ -29,5 +30,10 @@ export class AppComponent implements OnInit {
   private stringTransform(stringSmall: string): string {
     const stringLarge = stringSmall.toUpperCase();
     return stringLarge;
+  }
+
+  private stringSum(strFirst: string, strSecond: string): string{
+    const stringResult = strFirst + ' ' + strSecond;
+    return stringResult;
   }
 }
