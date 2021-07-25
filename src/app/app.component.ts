@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
     this.starStrings(3);
     this.eachSymbolOfString('ABCD')
     this.fiftyEvenNumber();
+    this.deleteSymbol('askantya', 'a');
   }
 
   private starStrings(starNum: number): void {
@@ -34,5 +35,17 @@ export class AppComponent implements OnInit {
     for(let i=1; i<=50; i++){
       if(i%2==0) console.log(i);
     }
+  }
+
+  private deleteSymbol(wholeString: string, delSymbol:string): void {
+    let delSymbolString = wholeString;
+    for(let i=0; i<delSymbolString.length; i++){
+    let a = delSymbolString[i];
+      if(a == delSymbol){
+        delSymbolString = delSymbolString.replace(delSymbolString[i], '');
+        i--;
+      }
+    }
+    console.log(delSymbolString);
   }
 }
