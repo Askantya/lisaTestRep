@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
-    const firstSymbol = this.findIndexOfSymbol('yellow', 'y');
-    console.log(firstSymbol);
+    const substringOfString = this.returnSubstring('yellow');
+    console.log(substringOfString);
   }
 
 
@@ -45,5 +45,10 @@ export class AppComponent implements OnInit {
   private findIndexOfSymbol(stringExample: string, symbol: string): number {
     const numberOfSymbol = stringExample.indexOf(symbol, 0);
     return numberOfSymbol;
+  }
+
+  private returnSubstring(wholeString: string): string {
+    const substring = wholeString.slice(0, 2);
+    return substring;
   }
 }
