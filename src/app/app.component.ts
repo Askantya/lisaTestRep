@@ -8,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
-    const stringWithoutSpaces = this.delStringSpaces('This string without spaces');
-    console.log(stringWithoutSpaces)
-       
+    const firstSymbol = this.findIndexOfSymbol('yellow', 'y');
+    console.log(firstSymbol);
   }
 
 
@@ -41,5 +40,10 @@ export class AppComponent implements OnInit {
   private delStringSpaces(stringWithSpaces: string): string {
     const stringWithoutSpaces = stringWithSpaces.split(' ').join('');
     return stringWithoutSpaces;
+  }
+
+  private findIndexOfSymbol(stringExample: string, symbol: string): number {
+    const numberOfSymbol = stringExample.indexOf(symbol, 0);
+    return numberOfSymbol;
   }
 }
