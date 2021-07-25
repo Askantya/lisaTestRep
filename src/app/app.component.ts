@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
-    const substringOfString = this.returnSubstring('yellow');
-    console.log(substringOfString);
+    const substringResult = this.searchOfSubstring('ELizaveta', 'liza');
+    console.log(substringResult);
   }
 
 
@@ -50,5 +50,12 @@ export class AppComponent implements OnInit {
   private returnSubstring(wholeString: string): string {
     const substring = wholeString.slice(0, 2);
     return substring;
+  }
+
+  private searchOfSubstring(stringTry: string, substringTry: string): boolean {
+    const stringTryLower = stringTry.toLowerCase();
+    const substringTryLower = substringTry.toLowerCase();
+    const substringResult = stringTryLower.includes(substringTryLower);
+    return substringResult;
   }
 }
