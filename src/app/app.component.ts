@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-for-of */
 import { keyframes } from '@angular/animations';
+import { importExpr } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +12,9 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     const newMatrixArray = this.matrixArray(4, 5);
     this.shiftingArrayElements(4);
+    this.sortListOfStudents(2);
   }
+
 
   private matrixArray(firstNumber: number, secondNumber: number): void {
     const array1 = new Array(secondNumber).fill(0).map( () => new Array(firstNumber).fill(0));
@@ -43,4 +46,31 @@ export class AppComponent implements OnInit {
     const arrayUnification = new Array(array1, array2, array3);
     console.log(arrayUnification);
   }
+
+  private sortListOfStudents(numberOfCourse: number): any {
+    const listOfStudents = [
+      {name: 'Иванов Александр Сергеевич',
+        averageMark: 9.2,
+        course: 2,},
+
+      {name: 'Васнецов Сергей Юрьевич',
+        averageMark: 9.0,
+        course: 1,},
+
+      {name: 'Беляева Марина Александровна',
+        averageMark: 8.2,
+        course: 2,},
+
+      {name: 'Прохоров Максим Игнатьевич',
+        averageMark: 8.6,
+        course: 3,},
+
+      {name: 'Собакина Нина Федоровна',
+        averageMark: 9.8,
+        course: 2,}
+    ];
+    const arrayOfStudents = listOfStudents.filter(element => element.course === numberOfCourse);
+    arrayOfStudents.sort((a, b) => a.averageMark - b.averageMark);
+    console.log(arrayOfStudents);
+  };
 }
