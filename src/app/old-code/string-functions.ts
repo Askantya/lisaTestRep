@@ -37,8 +37,3 @@ export const searchOfSubstring = (stringTry: string, substringTry: string): bool
   const substringResult = stringTryLower.includes(substringTryLower);
   return substringResult;
 };
-
-
-// 4) дана структура [[1, 2], [3, 4]] нужно получить пары [[1, 3], [1, 4], [2, 3], [2, 4]].
-// Дожно работать с любым размером первоначальных данных
-// [[1, 2, 3], [4, 5, 6], [7, 8, 9]] => [[1, 4, 7], [1, 4, 8], [1, 4, 9], [1, 5, 7], [1, 5, 7] ... ]
