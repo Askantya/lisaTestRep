@@ -1,5 +1,39 @@
+<!-- вывести значение из компоненты -->
+
 <div>
-  <div class="row" *ngFor="let count of rows">
-    <div class="block" *ngFor="let i of count"></div>
-  </div>
+  {{ field }}
 </div>
+
+<button (click)="onClickButton()">
+  button
+</button>
+
+<button (dblclick)="onClickButton()">
+  dblclick button
+</button>
+
+<button (mouseenter)="onClickButton()">
+  enter button
+</button>
+
+<input [(ngModel)]="field">
+
+<div *ngIf="true">
+  ngIf true
+</div>
+
+<div *ngIf="true">
+  ngIf false
+</div>
+
+<div>
+
+  <p *ngFor="let number of array; let index = index">
+    {{ index }}: {{ number }}
+  </p>
+
+</div>
+
+<!-- (mouseenter) -> onClickButton()
+[value] <- field
+[()] -->
