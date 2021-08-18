@@ -1,10 +1,12 @@
-.class1 {
-  background-color: red;
-  font-size: 20px;
-
-  .class2 {
-    .class3 {
-      
+.row {
+  display: flex;
+  justify-content: center;
+  .block {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    &:not(:last-child) {
+      margin-right: 5px;
     }
   }
 }

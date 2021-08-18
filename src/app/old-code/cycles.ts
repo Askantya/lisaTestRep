@@ -86,4 +86,25 @@ const isSimpleNumber = (value: number): boolean => {
   return true;
 };
 //--------
+const arrayS = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 
+const getMappedArrayElements = (array: any[][]): any[][] => {
+  if (array.length === 1) {
+    return array[0].map(element => [element]);
+  }
+
+  const newarr = array.shift();
+
+  const arset = getMappedArrayElements(array);
+
+  return newarr?.reduce((acc, el) => {
+    arset.forEach(setElement => {
+      acc = [...acc, [el, ...setElement]];
+    });
+    return acc;
+  }, []);
+};
