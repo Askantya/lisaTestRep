@@ -3,10 +3,10 @@
 
   <div class = "distance">
 
-    <input type = "text" [(ngModel)] = "firstCell" placeholder="Имя">
-    <input type = "text" [(ngModel)] = "secondCell" placeholder="Описание">
+    <input type = "text" [(ngModel)] = "firstValue" placeholder="Имя">
+    <input type = "text" [(ngModel)] = "secondValue" placeholder="Описание">
 
-    <button (click) = "addStringToTable(firstCell, secondCell)"> Добавить </button>
+    <button (click) = "addStringToTable(firstValue, secondValue)"> Добавить </button>
 
   </div>
 
@@ -23,15 +23,19 @@
 
       <tbody>
         <tr *ngFor = "let item of arrayOfTable">
-          <td class = "firstCell"> {{item.name}}
+          <td class = "firstValue"> 
+            {{item.name}}
           </td>
-          <td class = "secondCell">{{item.description}}
+          <td class = "secondValue">
+            {{item.description}}
           </td>
         </tr>
 
       </tbody>
 
     </table>
+
+    <input type = "checkbox" value = "false" onclick = "checkboxClick()">
 
   </div>
 </div>
