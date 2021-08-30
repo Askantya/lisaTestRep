@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   public firstValue = '';
   public secondValue = '';
   public arrayOfTable: StringTable[] = [];
+  public checkButton = true;
 
   public ngOnInit(): void {
     if (true) {
@@ -28,14 +29,8 @@ export class AppComponent implements OnInit {
     this.arrayOfTable.push(newRow);
   }
 
-  public checkboxClick(valueCheckbox: boolean): any{
-    if(valueCheckbox) {
-      valueCheckbox = false;
-      this.arrayOfTable[1].description = '';
-    }
-    else
-    if(!valueCheckbox) {
-      valueCheckbox = true;
-    }
+  public checkboxClick(): void{
+    this.checkButton = !this.checkButton;
   }
+
 }

@@ -8,6 +8,8 @@
 
     <button (click) = "addStringToTable(firstValue, secondValue)"> Добавить </button>
 
+    <input type = "checkbox" [value] = "checkButton" (click) = "checkboxClick()">
+
   </div>
 
   <div>
@@ -17,7 +19,7 @@
       <thead>
       <tr>
         <th class = "th"> Имя </th>
-        <th> Описание </th>
+        <th *ngIf = "checkButton"> Описание </th>
       </tr>
       </thead>
 
@@ -26,7 +28,7 @@
           <td class = "firstValue"> 
             {{item.name}}
           </td>
-          <td class = "secondValue">
+          <td class = "secondValue" *ngIf = "checkButton">
             {{item.description}}
           </td>
         </tr>
@@ -34,9 +36,7 @@
       </tbody>
 
     </table>
-
-    <input type = "checkbox" value = "false" onclick = "checkboxClick()">
-
+    
   </div>
 </div>
 
