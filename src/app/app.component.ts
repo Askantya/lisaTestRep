@@ -15,6 +15,9 @@ export class AppComponent implements OnInit {
   public secondValue = '';
   public arrayOfTable: StringTable[] = [];
   public checkButton = true;
+  public username = '';
+  public password = '';
+  public checkUsername = true;
 
   public ngOnInit(): void {
     if (true) {
@@ -31,6 +34,16 @@ export class AppComponent implements OnInit {
 
   public checkboxClick(): void{
     this.checkButton = !this.checkButton;
+  }
+
+  public usernameCheck(): void{
+    console.log('Логин:' + this.username);
+    console.log('Пароль:' + this.password);
+    if ((this.username.includes('@')) && (this.username.includes('.'))) {
+      this.checkUsername = true;
+    } else {
+      this.checkUsername = false;
+    }
   }
 
 }

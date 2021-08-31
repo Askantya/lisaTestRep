@@ -3,32 +3,32 @@
 
   <div class = "distance">
 
-    <input type = "text" [(ngModel)] = "firstValue" placeholder="Имя">
-    <input type = "text" [(ngModel)] = "secondValue" placeholder="Описание">
+    <input type = "text" [(ngModel)]="firstValue" placeholder="Имя">
+    <input type = "text" [(ngModel)]="secondValue" placeholder="Описание">
 
     <button (click) = "addStringToTable(firstValue, secondValue)"> Добавить </button>
 
-    <input type = "checkbox" [value] = "checkButton" (click) = "checkboxClick()">
+    <input type="checkbox" [value]="checkButton" (click)="checkboxClick()">
 
   </div>
 
   <div>
 
-    <table class = "table">
+    <table class="table">
 
       <thead>
       <tr>
-        <th class = "th"> Имя </th>
-        <th *ngIf = "checkButton"> Описание </th>
+        <th class="th"> Имя </th>
+        <th *ngIf="checkButton"> Описание </th>
       </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor = "let item of arrayOfTable">
-          <td class = "firstValue"> 
+        <tr *ngFor="let item of arrayOfTable">
+          <td class="firstValue"> 
             {{item.name}}
           </td>
-          <td class = "secondValue" *ngIf = "checkButton">
+          <td class="secondValue" *ngIf="checkButton">
             {{item.description}}
           </td>
         </tr>
@@ -37,6 +37,32 @@
 
     </table>
     
+  </div>
+
+</div>
+
+<div class="form">
+  <div>
+    <p class="formText">Введите Логин:</p>
+  </div>
+
+  <div>
+    <input [(ngModel)]="username" placeholder="Email">
+  </div>
+
+  <div>
+    <p>Введите Пароль:</p>
+  </div>
+
+  <div>
+    <input [(ngModel)]="password" placeholder="Password">
+  </div>
+
+  <div>
+    <button (click)="usernameCheck()" class="buttonForm">
+      Логин
+    </button>
+    <p *ngIf="!checkUsername">ti pidor!</p>
   </div>
 </div>
 
