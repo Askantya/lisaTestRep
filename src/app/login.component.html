@@ -1,0 +1,27 @@
+<html>
+  <div class="form">
+    <div>
+      <p>Введите Логин:</p>
+    </div>
+  
+    <div>
+      <input [(ngModel)]="username" placeholder="Email">
+    </div>
+  
+    <div>
+      <p>Введите Пароль:</p>
+    </div>
+  
+    <div>
+      <input [(ngModel)]="password" placeholder="Password">
+    </div>
+  
+    <div>
+      <button (click)="usernameCheck()" class="buttonForm">
+        Логин
+      </button>
+      <p *ngIf="!checkUsername">ti pidor!</p>
+    </div>
+  </div>
+  
+</html>

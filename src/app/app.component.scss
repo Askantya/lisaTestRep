@@ -11,43 +11,10 @@
   }
 }
 
-.distance {
-  padding-bottom: 20px;
+.nav {
+  clear: both;
 }
 
-.table {
-  border: 1px solid;
-  border-spacing: 0px;
-  width: 60%;
-}
-
-.th {
-  border-right: 1px solid;
-  text-align: center;
-}
-
-.firstValue {
-  border-right: 1px solid;
-  border-top: 1px solid;
-  text-align: center;
-  height: 20px;
-}
-
-.secondValue {
-  border-top: 1px solid;
-  text-align: center;
-  height: 20px;
-}
-
-.form {
-  border: black 1px solid;
-  margin-top: 100px;
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.buttonForm{
-  margin: 10px;
+.active {
+  color:red;
 }
