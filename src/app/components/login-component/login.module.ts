@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+
+import {Routes, RouterModule} from '@angular/router';
+
 import { LoginComponent } from './login.component';
 
+const loginRoutes: Routes = [
+  {path: '', component:LoginComponent}
+];
 @NgModule({
   imports: [
-    BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forChild(loginRoutes)
   ],
   declarations: [ LoginComponent ],
-  exports: [ LoginComponent ]
+  exports: [ LoginComponent, RouterModule ]
 })
 
 export class LoginModule { }
