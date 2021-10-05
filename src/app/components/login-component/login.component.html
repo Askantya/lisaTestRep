@@ -1,27 +1,33 @@
 <html>
-  <div class="form">
-    <div>
-      <p>Введите Логин:</p>
-    </div>
-  
-    <div>
-      <input [(ngModel)]="username" placeholder="Email">
-    </div>
-  
-    <div>
-      <p>Введите Пароль:</p>
-    </div>
-  
-    <div>
-      <input [(ngModel)]="password" placeholder="Password">
-    </div>
-  
-    <div>
-      <button (click)="usernameCheck()" class="buttonForm">
-        Логин
-      </button>
-      <p *ngIf="!checkUsername">ti pidor!</p>
-    </div>
+  <div class="general-form">
+    <form>
+      <div class="form-control">
+        <label>Логин</label>
+
+        <input class="input" name="login" 
+        [(ngModel)]="loginForm.login" #login="ngModel" 
+        required email />
+
+        <div [hidden]="login.valid || login.untouched" class="alert">
+          Некорректный email
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label>Пароль</label>
+
+        <input class="input" type="password" name="password" 
+        [(ngModel)]="loginForm.password" #password="ngModel"
+        required password />
+
+        <div [hidden]="password.valid||password.untouched" class="alert">
+          Пароль должен содержать только латинские буквы и цифры
+        </div>
+
+      </div>
+
+      <button [disabled]="login.invalid||password.invalid" class="button-form" (click)="printForm()">Войти</button>
+    </form>
   </div>
   
 </html>

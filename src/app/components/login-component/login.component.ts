@@ -7,17 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class LoginComponent {
-  public username = '';
-  public password = '';
-  public checkUsername = true;
+  public loginForm: any = {
+    login: '',
+    password: '',
+  };
 
-  public usernameCheck(): void{
-    console.log('Логин:' + this.username);
-    console.log('Пароль:' + this.password);
-    if ((this.username.includes('@')) && (this.username.includes('.'))) {
-      this.checkUsername = true;
-    } else {
-      this.checkUsername = false;
-    }
+  public printForm(): void {
+    console.log(this.loginForm);
   }
 }
