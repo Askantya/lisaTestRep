@@ -1,32 +1,28 @@
 <html>
   <div class="general-form">
-    <form>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
       <div class="form-control">
-        <label>Логин</label>
+        <label>Email</label>
 
-        <input class="input" name="login" 
-        [(ngModel)]="loginForm.login" #login="ngModel" 
-        required email />
+        <input class="input" name="email" formControlName="userEmail"/>
 
-        <div [hidden]="login.valid || login.untouched" class="alert">
-          Некорректный email
+        <div class="alert" *ngIf="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched">
+          Неправильный email
         </div>
       </div>
 
       <div class="form-control">
         <label>Пароль</label>
 
-        <input class="input" type="password" name="password" 
-        [(ngModel)]="loginForm.password" #password="ngModel"
-        required password />
+        <input class="input" type="password" name="password" formControlName="userPassword"/>
 
-        <div [hidden]="password.valid||password.untouched" class="alert">
-          Пароль должен содержать только латинские буквы и цифры
+        <div class="alert" *ngIf="myForm.controls['userPassword'].invalid && myForm.controls['userPassword'].touched">
+          Введите пароль
         </div>
 
       </div>
 
-      <button [disabled]="login.invalid||password.invalid" class="button-form" (click)="printForm()">Войти</button>
+      <button [disabled]="myForm.invalid" class="button-form">Войти</button>
     </form>
   </div>
   
